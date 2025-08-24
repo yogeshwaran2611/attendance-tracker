@@ -179,7 +179,7 @@ export function AttendanceMarking({ userEmail, isAuthenticated }: AttendanceMark
                     branch: studentBranch,
                     district: row[1] || "",
                     collegeType: row[2] || "",
-                    totalSessions: Number.parseInt(row[7]) || 0,
+                    totalSessions: row[7] ? Number.parseInt(row[7]) : 0,
                     totalAttended: Number.parseInt(row[8]) || 0,
                     present: isPresent,
                 };
